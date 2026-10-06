@@ -36,8 +36,8 @@ weeks:
   - week: 6
     module: containers
     topic: Container security & module wrap-up
-    activity: Lab work
-    lecture: null
+    activity: Lecture & hands-on lab
+    lecture: lectures/06-container-security/slides.md
     lab_due: labs/01-containers-podman
   - week: 7
     module: automation
