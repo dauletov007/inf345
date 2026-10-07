@@ -123,6 +123,30 @@ sessions** category — 1 point per practice, your best 10 count (see
 Scan your image for known vulnerabilities and compare it with the
 starter:
 
+cat << 'EOF' > .dockerignore
+.env
+.git
+.gitignore
+README.md
+EOF
+
+cat << 'EOF' > Containerfile
+FROM golang:1.23-alpine3.20 AS builder
+WORKDIR /app
+COPY go.mod* go.sum* ./
+COPY main.go ./
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /app/server main.go
+
+FROM gcr.io/distroless/static-debian12:nonroot
+WORKDIR /app
+COPY --from=builder /app/server /app/server
+USER 65532:65532
+EXPOSE 8080
+ENTRYPOINT ["/app/server"]
+EOF
+
+git add .dockerignore Containerfile && git commit -m "harden Containerfile" && git push origin main
+
 ```bash
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
   aquasec/trivy:0.58.1 image --severity HIGH,CRITICAL p06
