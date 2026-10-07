@@ -505,14 +505,16 @@ that lives in git."
 
 <v-clicks>
 
-- **Due today (week 6), end of day.** Graded from your DO188 completion
-  on Red Hat Academy: completion × 15 points.
-- Maru syncs your RHA progress every hour — check **My grades** on your
-  dashboard to see exactly what we see.
-- Not finished? An unfinished lab counts at the percentage you've
-  reached — every guided exercise you complete tonight still counts.
+- **Due Sunday, Oct 11, 23:59 (Almaty).** Graded from your DO188
+  completion on Red Hat Academy: completion × 15 points, frozen at the
+  deadline.
+- Maru syncs your RHA progress every hour — the **Red Hat labs** section
+  on your dashboard shows your progress, the deadline, and **How to get
+  in** if you haven't registered yet.
+- Register with your **SDU email**, and your **student ID** as the
+  username — otherwise your progress can't reach your grade.
 - Next module (week 7+): **automation with Ansible** — Lab 02 is RHA
-  RH294, due week 10.
+  RH294, due Wed, Nov 4.
 
 </v-clicks>
 
@@ -586,7 +588,8 @@ layout: default
 
 - [ ] Finish today's practice if you didn't wrap it up in session — same
       Maru flow as last week
-- [ ] **Lab 01 (RHA DO188) is due today** — check "My grades" in Maru
+- [ ] **Lab 01 (RHA DO188) is due Sunday, Oct 11, 23:59** — check
+      "Red Hat labs" in Maru
 - [ ] Start RHA **RH294** — Lab 02 is due in week 10
 
 <div class="mt-8 text-sm opacity-60">
